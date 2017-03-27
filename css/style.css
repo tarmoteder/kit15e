@@ -1,0 +1,37 @@
+body {
+    background-image:  url("../img/983432.gif");
+    background-size: cover;
+    color:fuchsia;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+}
+
+a:link, a:visited, a:hover {
+    background-color: aliceblue;
+    text-align: center;
+    display: inline-block;
+}
+
+a:link {
+    color:chartreuse;
+}
+
+a:visited {
+    color:chocolate;
+}
+
+a:hover {
+    color:azure;
+}
+
+div {
+    color:chartreuse;
+    font-family: "Arial";
+    font-weight: bold;
+    font-size: 150%;
+}
+
+
