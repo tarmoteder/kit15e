@@ -6,7 +6,7 @@ function back_home(){
 
 function menu(){
     
-    $menu = "functions, php, array, file, link1, link2, link3";
+    $menu = "functions, php, array, file, db";
     $menu = explode(",",$menu);
     
 
