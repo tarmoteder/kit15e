@@ -40,10 +40,42 @@ function delete_record($conn){
     $result = $conn -> query($sql);
 }
 
-connect($conn);
+// connect($conn);
 // add_record($conn);
-show_all($conn);
+// show_all($conn);
 // delete_record($conn);
 
+function show_button($conn){
+    echo "<input type='submit' name='show' value='Näita kõiki kirjeid'>"; 
+        if(isset($_POST['show'])){
+            show_all($conn);
+        } else {echo "Ei õnnestunud";}
+}
+
+function add_button($conn){
+    echo "<input type='submit' name='add' value='Lisa kirje'>"; 
+        if(isset($_POST['add'])){
+            add_record($conn);
+        } else {echo "Ei õnnestunud";}
+}
+
+function delete_button($conn){
+    echo "<input type='submit' name='delete' value='Kustuta kirje'>"; 
+        if(isset($_POST['delete'])){
+            delete_record($conn);
+        } else {echo "Ei õnnestunud";}
+}
 
 ?>
+
+<!doctype html>
+<html>
+    <body>
+        <form action='' method='post'>
+           <ul>
+            <li><?php show_button($conn); ?></li> <li><?php add_button($conn); ?></li>   
+            <li><?php delete_button($conn); ?></li>
+           </ul> 
+        </form>
+    </body>
+</html>
